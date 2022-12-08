@@ -1,0 +1,12 @@
+html {
+    box-sizing: border-box;
+}
+
+*,::after,::before {
+    box-sizing: inherit;
+}
+.checked {
+    text-decoration: line-through;
+}
+
+font-family: 'Lato', sans-serif;
