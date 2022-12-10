@@ -9,6 +9,11 @@
     <meta property="og:image" content="images/OG_image.JPG">
     <title>Lista zadań</title>
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/body.css" rel="stylesheet">
+    <link href="css/section.css" rel="stylesheet">
+    <link href="css/container.css" rel="stylesheet">
+    <link href="css/tasks.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -18,21 +23,26 @@
     <script defer src="js/script.js"> </script>
 </head>
 
-<body>
-    <h1>Lista zadań</h1>
-    <section>
-        <form class="js-form">
-            <h2>Dodaj nowe zadanie </h2>
-            <p>
-                <input value="Co jest do zrobienia?" class="js-newTask">
-                <button>Dodaj zadanie</button>
-            </p>
-        </form>
+<body class="body">
+    <container class="container"></container>
+    <h1 class="body__heading">Lista zadań</h1>
+    <section class="section">
+        <h2 class="section__heading">Dodaj nowe zadanie </h2>
+        <div class="section__main">
+            <form class="form js-form">
+                <input placeholder="Co jest do zrobienia?" class="form__input js-newTask">
+                <button class="form__addNewTaskButton">Dodaj zadanie</button>
+            </form>
+        </div>
     </section>
-    <section>
-        <h2>Lista zadań</h2>
-        <ul class="js-tasks"></ul>
+
+    <section class="section">
+        <h2 class="section__heading">Lista zadań</h2>
+        <div class="section__main">
+            <ul class="tasks js-tasks"></ul>
+        </div>
     </section>
+    </container>
 </body>
 
 </html>

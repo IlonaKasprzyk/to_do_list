@@ -1,0 +1,18 @@
+.section {
+    background-color: rgb(252, 252, 252);
+    max-width: 500px;
+    width: 100%;
+    margin: 0px 8px;
+}
+
+.section__heading {
+    font-size: 20px;
+    padding: 20px;
+    border-bottom: 1px solid  hsl(0, 2%, 81%);
+}
+
+.section__main {
+    padding: 10px 10px 20px 20px;
+}
+
+

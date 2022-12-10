@@ -1,0 +1,29 @@
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 10px;
+}
+
+.form__input {
+    padding: 8px;
+    border: 1px solid rgb(156, 156, 156);  
+}
+
+.form__addNewTaskButton {
+    background-color: teal;
+    border: none;
+    color: white;
+    padding: 6px;
+    font-size: 11px;
+    width: 100px;
+    text-align: center;
+}
+
+.form__addNewTaskButton:hover {
+    background-color: hsl(180, 100%, 30%);
+}
+
+.form__addNewTaskButton:active {
+    background-color: hsl(180, 100%, 35%);
+}
