@@ -5,6 +5,12 @@
     margin: 0px 8px;
 }
 
+@media (max-width: 767px) {
+    .section {
+        max-width: 400px;
+    }
+}
+
 .section__heading {
     font-size: 20px;
     padding: 20px;

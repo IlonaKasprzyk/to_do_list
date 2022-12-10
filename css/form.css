@@ -5,6 +5,13 @@
     grid-gap: 10px;
 }
 
+@media (max-width: 767px) {
+    .form {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+}
+
 .form__input {
     padding: 8px;
     border: 1px solid rgb(156, 156, 156);  
@@ -16,7 +23,6 @@
     color: white;
     padding: 6px;
     font-size: 11px;
-    width: 100px;
     text-align: center;
 }
 

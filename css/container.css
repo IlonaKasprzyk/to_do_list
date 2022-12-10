@@ -1,4 +1,12 @@
 .container {
     margin: 0 auto;
     display: block;
+    width: 100%;
+    word-break: break-word;
+}
+
+@media (max-width: 767px) {
+    .container {
+        width : 50%;
+    }
 }
