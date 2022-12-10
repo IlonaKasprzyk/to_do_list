@@ -10,6 +10,6 @@ I created it as part of a homework during frontent development online course - [
 - BEM
 - ES6+ features
 ## Check it out! :)
-https://ilonakasprzyk.github.io/currency-converter/
+https://ilonakasprzyk.github.io/to_do_list/
 
-![To di list gif](https://github.com/IlonaKasprzyk/to_do_list/blob/master/images/readme_gif.gif?raw=true)
+![To do list gif](https://github.com/IlonaKasprzyk/to_do_list/blob/master/images/readme_gif.gif?raw=true)
