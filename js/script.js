@@ -1,7 +1,5 @@
 {
-    const tasks = [
-      
-    ];
+    const tasks = [];
 
     const addNewTask = (newTaskContent) => {
         tasks.push({
@@ -55,7 +53,6 @@
             <button class="tasks__removeButton js-remove">🗑</button>
             </li>
             `;
-
         }
 
         document.querySelector(".js-tasks").innerHTML = htmlString;
@@ -70,8 +67,9 @@
         const newTaskContent = newTaskInput.value.trim();
        
         if (newTaskContent !== "") {
-        addNewTask(newTaskContent);
-        newTaskInput.value = "";}
+            addNewTask(newTaskContent);
+            newTaskInput.value = "";
+        }
 
         newTaskInput.focus();
     };
