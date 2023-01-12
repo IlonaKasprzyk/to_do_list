@@ -1,13 +1,10 @@
 .body {
     font-family: 'Lato', sans-serif;
-    max-width: 1000px;
-    padding-left: 20%;
     background-color: hsl(0, 0%, 91%);
+    max-width: 900px;
+    padding: 20px;
+    margin: 0 auto;
+    display: block;
+    word-break: break-word;
 }
 
-.body__heading {
-    font-size: 30px;
-    padding-top: 7%;
-   
-    
-}
