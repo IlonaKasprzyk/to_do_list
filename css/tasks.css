@@ -30,10 +30,20 @@
     color: white;
 }
 
+.tasks__doneButton:hover {
+    background-color: rgb(55, 164, 55);
+    transition: 0.5s;
+}
+
 .tasks__removeButton {
     border: none;
     width: 30px;
     height: 30px;
     background-color: red;
     color: white;
+}
+
+.tasks__removeButton:hover {
+    background-color: rgb(251, 89, 89);
+    transition: 0.5s;
 }

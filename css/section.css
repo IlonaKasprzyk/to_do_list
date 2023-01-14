@@ -38,6 +38,12 @@
     background: none;
 }
 
+.section__listButtons:hover {
+    color: hsl(180, 45%, 65%);
+    transition: 1s;
+}
+
+
 .section__listButtons:disabled {
     color: hsla(0, 0%, 49%, 0.389);
 }

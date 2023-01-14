@@ -23,11 +23,15 @@
     border: none;
     color: white;
     padding: 10px;
+    
    
 }
 
 .form__addNewTaskButton:hover {
     background-color: hsl(180, 100%, 30%);
+    transition: 0.5s;
+    transform: scale(1.1);
+    
 }
 
 .form__addNewTaskButton:active {
