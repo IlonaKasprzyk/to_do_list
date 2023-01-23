@@ -39,8 +39,6 @@
         render();
      }; 
      
-
-
     const renderTasks = () => { 
         let tasksListHtmlString = "";
 
@@ -105,8 +103,6 @@
         if (toggleHideDoneTasksButton) {toggleHideDoneTasksButton.addEventListener("click", markHideAllTasksDone);
         };
     };
-
-
     
     const render = () => {
        renderTasks();
