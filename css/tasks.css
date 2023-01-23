@@ -31,7 +31,7 @@
 }
 
 .tasks__doneButton:hover {
-    background-color: rgb(55, 164, 55);
+    background-color: rgb(68, 151, 68);
     transition: 0.5s;
 }
 
@@ -44,6 +44,6 @@
 }
 
 .tasks__removeButton:hover {
-    background-color: rgb(251, 89, 89);
+    background-color: rgb(244, 97, 97);
     transition: 0.5s;
 }
