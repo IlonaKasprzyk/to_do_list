@@ -39,11 +39,7 @@
         render();
      }; 
      
-     /* const hideAllTasksDone = () => {
-        const hideAllDone = document.querySelector(".js-hideAllDoneButton");
 
-    }; */
-   
 
     const renderTasks = () => { 
         let tasksListHtmlString = "";
