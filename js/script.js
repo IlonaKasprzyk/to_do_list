@@ -12,69 +12,66 @@
 
     const removeTask = (taskIndex) => {
         tasks = [...tasks.slice(0, taskIndex),
-                ...tasks.slice(taskIndex+1)];
+        ...tasks.slice(taskIndex + 1)];
         render();
     };
 
     const toggleTaskDone = (taskIndex) => {
         tasks = tasks.map((task) => {
-            if (task === tasks[taskIndex]) {
-                return {...task, done: !task.done};
-        }
-                return task ;
-            });
-     render();   
+            return task === tasks[taskIndex] ? { ...task, done: !task.done } : task;
+        });
+
+        render();
     };
-    
+
     const markAllTaskDone = () => {
         tasks = tasks.map((task) => ({
             ...task,
             done: true,
         }));
-        render ();
+        render();
     };
 
     const markHideAllTasksDone = () => {
         hideDoneTasks = !hideDoneTasks;
         render();
-     }; 
-     
-    const renderTasks = () => { 
+    };
+
+    const renderTasks = () => {
         let tasksListHtmlString = "";
 
-    for (const task of tasks) {
-        tasksListHtmlString += `
+        for (const task of tasks) {
+            tasksListHtmlString += `
         <li class="tasks__item ${task.done && hideDoneTasks ? "tasks__item--hidden" : ""} js-tasks"> 
-        <button class="tasks__doneButton js-done">
-        ${task.done ? "✔" : ""}
-        </button>
-        <span class="${task.done ? " tasks__content--done" : ""}">
-         ${task.content}
-        </span>
-        <button class="tasks__removeButton js-remove">🗑</button>
+         <button class="tasks__doneButton js-done">
+             ${task.done ? "✔" : ""}
+         </button>
+         <span class="${task.done ? " tasks__content--done" : ""}">
+             ${task.content}
+         </span>
+         <button class="tasks__removeButton js-remove">🗑</button>
         </li>
-        `; 
+        `;
         };
 
-    document.querySelector(".js-tasks").innerHTML = tasksListHtmlString;
+        document.querySelector(".js-tasks").innerHTML = tasksListHtmlString;
     };
 
     const renderButtons = () => {
         let htmlString = "";
-        const taskCount = tasks.length;
-        if (taskCount !== 0) {
-          htmlString += `
+        if (tasks.length !== 0) {
+            htmlString += `
             <button class="section__listButtons js-listButtons js-hideAllDoneButton js-markHideAllTasksDone">
-            ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
+             ${hideDoneTasks ? "Pokaż" : "Ukryj"} ukończone
             </button>
             <button class="section__listButtons js-markAllDoneButton" ${tasks.every(({ done }) => done) ? "disabled" : ""}> 
-            Ukończ wszystkie
+             Ukończ wszystkie
             </button>
           `;
         };
-    
+
         document.querySelector(".js-listButtons").innerHTML = htmlString;
-      };
+    };
 
     const bindEvents = () => {
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -91,23 +88,25 @@
             toggleDoneButton.addEventListener("click", () => {
                 toggleTaskDone(index);
             });
-        }); 
+        });
     };
 
     const bindButtonEvents = () => {
         const markAllDoneButton = document.querySelector(".js-markAllDoneButton");
-        if (markAllDoneButton) {markAllDoneButton.addEventListener("click", markAllTaskDone);
+        if (markAllDoneButton) {
+            markAllDoneButton.addEventListener("click", markAllTaskDone);
         };
 
         const toggleHideDoneTasksButton = document.querySelector(".js-markHideAllTasksDone");
-        if (toggleHideDoneTasksButton) {toggleHideDoneTasksButton.addEventListener("click", markHideAllTasksDone);
+        if (toggleHideDoneTasksButton) {
+            toggleHideDoneTasksButton.addEventListener("click", markHideAllTasksDone);
         };
     };
-    
+
     const render = () => {
-       renderTasks();
-       renderButtons();
-       
+        renderTasks();
+        renderButtons();
+
         bindEvents();
         bindButtonEvents();
     };
@@ -117,7 +116,7 @@
 
         const newTaskInput = document.querySelector(".js-newTask");
         const newTaskContent = newTaskInput.value.trim();
-       
+
         if (newTaskContent !== "") {
             addNewTask(newTaskContent);
             newTaskInput.value = "";
