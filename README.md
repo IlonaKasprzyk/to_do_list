@@ -9,6 +9,7 @@ I created it as part of a homework during frontent development online course - [
 - JavaScript
 - BEM
 - ES6+ features
+- Media queries
 ## Check it out! :)
 https://ilonakasprzyk.github.io/to_do_list/
 
